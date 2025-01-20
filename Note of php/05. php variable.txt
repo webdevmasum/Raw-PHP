@@ -1,0 +1,14 @@
+
+
+
+Common Super Global Variables in PHP:
+
+    $_GLOBALS: An associative array containing references to all global variables in the script.
+    $_SERVER: Contains information about the server and the execution environment.
+    $_REQUEST: Contains the contents of $_GET, $_POST, and $_COOKIE.
+    $_POST: Contains data sent through HTTP POST requests.
+    $_GET: Contains data sent through URL query strings.
+    $_FILES: Contains information about uploaded files.
+    $_ENV: Contains environment variables.
+    $_COOKIE: Contains data sent through cookies.
+    $_SESSION: Used for session variables.
