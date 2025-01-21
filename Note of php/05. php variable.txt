@@ -47,9 +47,7 @@ Variable:
 Constant:
 
     Definition: A storage whose value is fixed once set and cannot be changed.
-
     Value: Cannot be updated after declaration.
-
     Syntax (PHP): define('CONSTANT_NAME', value); or const CONSTANT_NAME = value;
 
     Example:
@@ -63,9 +61,8 @@ Key Differences:
     Declaration: Variables use $, constants use define or const.
 
 
-
-
-
+how to use const ??
+diffrence between variable and array??
 
 
 
