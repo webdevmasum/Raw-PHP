@@ -77,7 +77,7 @@ Adding Two Numbers
     echo "Email: " . $details[2]; // Output: Email: john@example.com
 
     The function getDetails gives back multiple values as an array (name, age, and email).
-    Checking if You Passed
+    Checking if You Passed 
 
 
     function checkGrade($score) {
