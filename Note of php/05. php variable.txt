@@ -61,8 +61,6 @@ Key Differences:
     Declaration: Variables use $, constants use define or const.
 
  
-how to use const ??
-diffrence between variable and array??
 
 
 
