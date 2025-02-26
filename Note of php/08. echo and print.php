@@ -8,7 +8,6 @@ Example:
     echo "This is ", "a test message";
 
 2. print:
-
     print o output statement, kintu eta ekta function hisebe kaaj kore.
     print ekta single parameter accept kore.
     print always ekta integer value (1) return kore, jeita mainly error checking e use hote pare.
@@ -21,6 +20,7 @@ Example:
 Main Difference:
     echo multiple parameters accept korte pare, kintu print only ekta parameter accept kore.
     echo kono value return kore na, kintu print 1 return kore.
+    -> print ekta function ar echo ekta language construct
 
 
     

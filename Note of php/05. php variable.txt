@@ -3,62 +3,58 @@
 
 Common Super Global Variables in PHP:
 
-    $_GLOBALS: An associative array containing references to all global variables in the script.
-    $_SERVER: Contains information about the server and the execution environment.
-    $_REQUEST: Contains the contents of $_GET, $_POST, and $_COOKIE.
-    $_POST: Contains data sent through HTTP POST requests.
-    $_GET: Contains data sent through URL query strings.
-    $_FILES: Contains information about uploaded files.
-    $_ENV: Contains environment variables.
-    $_COOKIE: Contains data sent through cookies.
-    $_SESSION: Used for session variables.
+    $_GLOBALS:  An associative array containing references to all global variables in the script.
+    $_SERVER:   Contains information about the server and the execution environment.
+    $_REQUEST:  Contains the contents of $_GET, $_POST, and $_COOKIE.
+    $_POST:     Contains data sent through HTTP POST requests.
+    $_GET:      Contains data sent through URL query strings.
+    $_FILES:    Contains information about uploaded files.
+    $_ENV:      Contains environment variables.
+    $_COOKIE:   Contains data sent through cookies.
+    $_SESSION:  Used for session variables.
 
 
 Variable:
 
-    Definition: A storage that can hold data, and the data can be changed during program execution.
-    Value: Can be updated.
-    Syntax (PHP): $variableName = value;
+    Definition:  A storage that can hold data, and the data can be changed during program execution.
+    Value:       Can be updated.
+    Syntax:      $variableName = value;
 
 
 
 Constant:
 
-    Definition: A storage whose value is fixed once set and cannot be changed.
-    Value: Cannot be updated after declaration.
-    Syntax (PHP): define('CONSTANT_NAME', value); or const CONSTANT_NAME = value;
+    Definition:  A storage whose value is fixed once set and cannot be changed.
+    Value:       Cannot be updated after declaration.
+    Syntax:      define('CONSTANT_NAME', value); or const CONSTANT_NAME = value;
 
 
 
 Sure! Here's a short explanation in English:
 Variable:
 
-    Definition: A storage that can hold data, and the data can be changed during program execution.
-
-    Value: Can be updated.
-
-    Syntax (PHP): $variableName = value;
+    Definition:     A storage that can hold data, and the data can be changed during program execution.
+    Value:          Can be updated.
+    Syntax (PHP):   $variableName = value;
 
     Example:
-
     $name = "John";
     $name = "Doe"; // Value updated
 
 Constant:
 
-    Definition: A storage whose value is fixed once set and cannot be changed.
-    Value: Cannot be updated after declaration.
-    Syntax (PHP): define('CONSTANT_NAME', value); or const CONSTANT_NAME = value;
+    Definition:     A storage whose value is fixed once set and cannot be changed.
+    Value:          Cannot be updated after declaration.
+    Syntax (PHP):   define('CONSTANT_NAME', value); or const CONSTANT_NAME = value;
 
     Example:
-
     define('SITE_NAME', 'MyWebsite');
 
 Key Differences:
 
-    Mutability: Variables can change; constants cannot.
-    Usage: Variables for changeable data, constants for fixed values.
-    Declaration: Variables use $, constants use define or const.
+    Mutability:     Variables can change; constants cannot.
+    Usage:          Variables for changeable data, constants for fixed values.
+    Declaration:    Variables use $, constants use define or const.
 
  
 
