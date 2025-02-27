@@ -12,33 +12,58 @@
 
         /* Styling for input fields */
         input[type="text"] {
-            background-color: #f0f8ff; /* Light Blue */
+            background-color: #f0f8ff; 
+            border: 1px solid #EDEFFF; 
+            border-radius: 5px; 
+            box-shadow: 0 4px 8px rgba(29, 42, 78, 0.1); 
+            transition: box-shadow 0.3s ease, border 0.3s ease; 
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            background-color: #EDEFFF;
+            border: 1px solid #0b1435; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
         }
 
         /* Styling for '+' and '-' buttons */
         .btn {
             font-size: 16px;
+            border-radius: 5px; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
         }
 
         .add-btn {
-            background-color: #020c35; /* Green for add button */
+            background-color: #020c35; 
             color: #EDEFFF;
         }
 
         .remove-btn {
-            background-color: #48d2fc; /* Red for remove button */
+            background-color: #07355a; 
             color: #EDEFFF;
         }
 
         .add-btn:hover,
         .remove-btn:hover {
-            opacity: 0.8; /* Slight opacity change on hover */
-            background-color: #13446b;
+            opacity: 0.8; 
+            background-color: #13446b; 
+            transform: scale(1.05); 
         }
 
         /* Styling for Submit button */
         #submitBtn {
+
+            background-color: #07355a; 
+            color: #EDEFFF;
             margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #submitBtn:hover {
+            background-color: #f0f8ff; 
+            color: #07355a;
+            font-weight: bold;
         }
     </style>
 </head>
