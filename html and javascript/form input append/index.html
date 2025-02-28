@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Fields</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 370px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            color: #21154d;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 3px;
+            background: #f3f3f3;
+        }
+        input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            background: #e8fcff;
+            box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        input:focus {
+            box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+            outline: none;
+            background: #f6e5fa;
+        }
+        input::placeholder {
+            color: #1980a0;
+            font-style: italic;
+        }
+        button {
+            padding: 10px 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 2px 2px 5px rgba(77, 233, 238, 0.3);
+        }
+        .add-btn {
+            background: linear-gradient(to right, #28a745, #218838);
+            color: white;
+        }
+        .add-btn:hover {
+            background: linear-gradient(to right, #218838, #1e7e34);
+            box-shadow: 2px 2px 8px rgba(0, 255, 0, 0.5);
+        }
+        .remove-btn {
+            background: linear-gradient(to right, #dc3545, #c82333);
+            color: white;
+        }
+        .remove-btn:hover {
+            background: linear-gradient(to right, #c82333, #bd2130);
+            box-shadow: 2px 2px 8px rgba(255, 0, 0, 0.5);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            box-shadow: 2px 2px 8px rgba(0, 0, 255, 0.3);
+        }
+        .submit-btn:hover {
+            background: linear-gradient(to right, #0056b3, #004494);
+            box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Dynamic Form</h2>
+        <form action="submit.php" method="POST">
+            <label>Name:</label>
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <label>Email:</label>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <label>Phone:</label>
+            <div class="input-group">
+                <input type="text" name="phone" placeholder="Enter your phone" required>
+            </div>
+
+            <label>Designation:</label>
+            <div id="designation">
+                <div class="input-group">
+                    <input type="text" name="designation[]" placeholder="Enter designation" required>
+                    <button type="button" class="add-btn" onclick="addField('designation')">+</button>
+                </div>
+            </div>
+
+            <label>Hobby:</label>
+            <div id="hobby">
+                <div class="input-group">
+                    <input type="text" name="hobby[]" placeholder="Enter hobby" required>
+                    <button type="button" class="add-btn" onclick="addField('hobby')">+</button>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function addField(sectionId) {
+            let section = document.getElementById(sectionId);
+            let newField = document.createElement("div");
+            newField.classList.add("input-group");
+            newField.innerHTML = `
+                <input type="text" name="${sectionId}[]" placeholder="Enter ${sectionId}" required>
+                <button type="button" class="remove-btn" onclick="removeField(this)">-</button>
+            `;
+            section.appendChild(newField);
+        }
+
+        function removeField(button) {
+            button.parentElement.remove();
+        }
+    </script>
+
+</body>
+</html>
