@@ -20,7 +20,7 @@ For Loop Array print another way
 *********************
 
 <?php
-    // Function to print array elements using implode
+// Function to print array elements
     function printArray($array) {
         // Checking if the array is not empty
         if (empty($array)) {
@@ -28,8 +28,11 @@ For Loop Array print another way
             return;
         }
 
-        // Printing array elements as a space-separated string
-        echo implode(" ", $array);
+        // Iterating through the array using a for loop
+        for ($i = 0; $i < count($array); $i++) {
+            // Printing each element
+            echo $array[$i] . " ";
+        }
     }
 
     // Example array
@@ -41,6 +44,28 @@ For Loop Array print another way
 
 
 
+
+*********************
+For Loop Array print another way
+*********************
+
+<?php
+// Associative array with keys and values
+    $array = [
+        "apple" => 10,
+        "banana" => 20,
+        "cherry" => 30
+    ];
+
+    // Get the keys and values using array_keys() and array_values()
+    $keys = array_keys($array);
+    $values = array_values($array);
+
+    // Using for loop to print the keys and values
+    for ($i = 0; $i < count($keys); $i++) {
+        echo "Key: " . $keys[$i] . ", Value: " . $values[$i] . "\n";
+    }
+?>
 
 
 
