@@ -35,6 +35,41 @@ Example for switch case:
 
 
 
+*******************
+Complex Example for switch case: 
+*******************
+
+
+<?php
+    $score = 85;
+    $category = "adult";
+
+    switch(true) {
+        case ($score >= 90 && $category == "adult"):
+            echo "You are an adult with an excellent score!";
+            break;
+        case ($score >= 80 && $score < 90 && $category == "adult"):
+            echo "You are an adult with a good score!";
+            break;
+        case ($score >= 70 && $score < 80 && $category == "adult"):
+            echo "You are an adult with an average score!";
+            break;
+        case ($score >= 90 && $category == "teen"):
+            echo "You are a teen with an excellent score!";
+            break;
+        case ($score >= 80 && $score < 90 && $category == "teen"):
+            echo "You are a teen with a good score!";
+            break;
+        case ($score >= 70 && $score < 80 && $category == "teen"):
+            echo "You are a teen with an average score!";
+            break;
+        default:
+            echo "Invalid score or category.";
+    }
+?>
+
+
+
 
 
 
