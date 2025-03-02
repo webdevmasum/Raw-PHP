@@ -143,13 +143,47 @@ Outer loop iteration 5
   Inner loop iteration 5
 
 
+*****************************
+Combining break and continue in a Complex Condition Example:
+*****************************
 
 
 
+<?php
+    for ($i = 1; $i <= 5; $i++) {
+        echo "Outer loop iteration $i\n";
+        
+        for ($j = 1; $j <= 5; $j++) {
+            if ($i == 3 && $j == 2) {
+                echo "  Breaking both loops at i = $i and j = $j\n";
+                break 2;  // Break both outer and inner loops
+            }
+            
+            if ($j == 4) {
+                echo "  Skipping j = 4 at i = $i\n";
+                continue;  // Skip current iteration of the inner loop, but continue with the outer loop
+            }
+            
+            echo "  Inner loop iteration $j\n";
+        }
+    }
+?>
 
 
+Output:
 
-
-
-
+Outer loop iteration 1
+  Inner loop iteration 1
+  Inner loop iteration 2
+  Inner loop iteration 3
+  Skipping j = 4 at i = 1
+  Inner loop iteration 5
+Outer loop iteration 2
+  Inner loop iteration 1
+  Inner loop iteration 2
+  Inner loop iteration 3
+  Skipping j = 4 at i = 2
+  Inner loop iteration 5
+Outer loop iteration 3
+  Breaking both loops at i = 3 and j = 2
 
