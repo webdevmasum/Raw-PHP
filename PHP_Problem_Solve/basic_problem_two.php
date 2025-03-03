@@ -194,7 +194,18 @@
     ?>
 
 
+✅ Problem 12: Remove Duplicates from an Array
 
+
+    <?php
+        function removeDuplicates($arr) {
+            return array_unique($arr);
+        }
+
+        // Test
+        print_r(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); 
+        // Output: Array ( [0] => 1 [1] => 2 [3] => 3 [4] => 4 [6] => 5 )
+    ?>
 
 
 
