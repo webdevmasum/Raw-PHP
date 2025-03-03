@@ -155,6 +155,30 @@
 
 
 
+✅ Problem 10: Simple Calculator (Add, Subtract, Multiply, Divide)
+
+
+    <?php
+        function calculator($num1, $num2, $operation) {
+            switch ($operation) {
+                case "add":
+                    return $num1 + $num2;
+                case "subtract":
+                    return $num1 - $num2;
+                case "multiply":
+                    return $num1 * $num2;
+                case "divide":
+                    return $num2 != 0 ? $num1 / $num2 : "Cannot divide by zero.";
+                default:
+                    return "Invalid operation.";
+            }
+        }
+
+        // Test
+        echo calculator(10, 5, "add"); // Output: 15
+    ?>
+
+
 
 
 
