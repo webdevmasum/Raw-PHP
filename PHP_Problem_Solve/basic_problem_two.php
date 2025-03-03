@@ -70,7 +70,30 @@
     ?>
 
 
+✅ Problem 5: Reverse a String
 
+
+    <?php
+        function reverseString($str) {
+            return strrev($str);
+        }
+
+        // Test
+        echo reverseString("Hello"); // Output: olleH
+    ?>
+
+
+✅ Problem 6: Check if a String is Palindrome
+
+    <?php
+        function isPalindrome($str) {
+            $reversedStr = strrev($str);
+            return $str === $reversedStr ? "Yes, it's a Palindrome!" : "No, it's not a Palindrome!";
+        }
+
+        // Test
+        echo isPalindrome("madam"); // Output: Yes, it's a Palindrome!
+    ?>
 
 
 
