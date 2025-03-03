@@ -120,6 +120,20 @@
 
 
 
+✅ Problem 8: Find the Factorial Using Recursion
+
+
+    <?php
+        function factorials($num) {
+            if ($num <= 1) {
+                return 1;
+            }
+            return $num * factorials($num - 1);
+        }
+
+        // Test
+        echo factorials(5); // Output: 120
+    ?>
 
 
 
