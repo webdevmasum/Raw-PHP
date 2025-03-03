@@ -181,6 +181,19 @@
 
 
 
+✅ Problem 11: Find the Length of an Array
+
+
+    <?php
+        function arrayLength($arr) {
+            return count($arr);
+        }
+
+        // Test
+        echo arrayLength([1, 2, 3, 4, 5]); // Output: 5
+    ?>
+
+
 
 
 
