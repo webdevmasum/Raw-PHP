@@ -97,7 +97,24 @@
 
 
 
+✅ Problem 7: Count Vowels in a String
 
+
+    <?php
+        function countVowels($str) {
+            $vowels = "aeiouAEIOU";
+            $count = 0;
+            for ($i = 0; $i < strlen($str); $i++) {
+                if (strpos($vowels, $str[$i]) !== false) {
+                    $count++;
+                }
+            }
+            return $count;
+        }
+
+        // Test
+        echo countVowels("Hello World"); // Output: 3
+    ?>
 
 
 
