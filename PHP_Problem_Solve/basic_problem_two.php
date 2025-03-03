@@ -136,6 +136,21 @@
     ?>
 
 
+✅ Problem 9: Fibonacci Series
+
+
+    <?php
+        function fibonacci($n) {
+            $fib = [0, 1];
+            for ($i = 2; $i < $n; $i++) {
+                $fib[] = $fib[$i - 1] + $fib[$i - 2];
+            }
+            return implode(", ", $fib);
+        }
+
+        // Test
+        echo fibonacci(10); // Output: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+    ?>
 
 
 
