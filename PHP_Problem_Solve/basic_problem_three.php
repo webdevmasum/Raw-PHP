@@ -144,8 +144,7 @@
 
 
 
-✅ 
-Problem 10: Find the Smallest Number in an Array
+✅ Problem 10: Find the Smallest Number in an Array
 
     <?php
         function findSmallestInArray($arr) {
@@ -156,7 +155,3 @@ Problem 10: Find the Smallest Number in an Array
         echo findSmallestInArray([1, 5, 3, 9, 2]); // Output: 1
     ?>
 
-
-
-✅
-✅
