@@ -98,8 +98,21 @@
 
 
 
+✅ Problem 7: Count the Number of Words in a String
 
-✅
+    <?php
+        function wordCount($str) {
+            return str_word_count($str);
+        }
+
+        // Test
+        echo wordCount("Hello world, this is PHP!"); // Output: 5
+    ?>
+
+
+
+
+
 ✅
 ✅
 ✅
