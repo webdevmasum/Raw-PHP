@@ -68,7 +68,20 @@
 
 
 
-✅
+✅ Problem 5: Check if a Year is a Leap Year
+
+    <?php
+        function isLeapYear($year) {
+            return ($year % 4 == 0 && $year % 100 != 0) || ($year % 400 == 0) ? "Leap Year" : "Not a Leap Year";
+        }
+
+        // Test
+        echo isLeapYear(2024); // Output: Leap Year
+    ?>
+
+
+
+
 ✅
 ✅
 ✅
