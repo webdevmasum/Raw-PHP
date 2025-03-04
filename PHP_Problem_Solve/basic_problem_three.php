@@ -112,8 +112,24 @@
 
 
 
+✅ Problem 8: Reverse an Array Without Using Built-in Functions
 
-✅
+    <?php
+        function reverseArray($arr) {
+            $reversed = [];
+            for ($i = count($arr) - 1; $i >= 0; $i--) {
+                $reversed[] = $arr[$i];
+            }
+            return $reversed;
+        }
+
+        // Test
+        print_r(reverseArray([1, 2, 3, 4, 5])); 
+        // Output: [5, 4, 3, 2, 1]
+    ?>
+
+
+
 ✅
 ✅
 ✅
