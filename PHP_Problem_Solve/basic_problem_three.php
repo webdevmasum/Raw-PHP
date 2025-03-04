@@ -82,7 +82,23 @@
 
 
 
-✅
+✅ Problem 6: Find the Second Largest Number in an Array
+
+    <?php
+        function secondLargest($arr) {
+            $uniqueArr = array_unique($arr);
+            rsort($uniqueArr);
+            return $uniqueArr[1] ?? "Array has no second largest number";
+        }
+
+        // Test
+        echo secondLargest([10, 20, 4, 45, 99, 99]); // Output: 45
+    ?>
+
+
+
+
+
 ✅
 ✅
 ✅
