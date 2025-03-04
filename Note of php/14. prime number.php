@@ -37,7 +37,7 @@ Prime Number: Another Way to check prime number
 ************************
 
     <?php
-    function printPrimeNumbers($start, $end) {
+    function printPrimeNumberstwo($start, $end) {
         for ($num = $start; $num <= $end; $num++) {
             if (gmp_prob_prime($num) > 0) {
                 echo $num . " ";
@@ -46,7 +46,7 @@ Prime Number: Another Way to check prime number
     }
 
     echo "Prime Numbers between 1 to 100:\n";
-    printPrimeNumbers(1, 100);
+    printPrimeNumberstwo(1, 100);
 ?>
 
 
@@ -54,7 +54,7 @@ Explain here:->
 
 <?php
 // printPrimeNumbers function ta prime numbers print korbe je start theke end porjonto
-    function printPrimeNumbers($start, $end) {
+    function printPrimeNumbersanother($start, $end) {
         // num ke start theke end porjonto iterate kora hocche
         for ($num = $start; $num <= $end; $num++) {
             // gmp_prob_prime function diye check kora hocche je num ta prime kina
@@ -68,7 +68,7 @@ Explain here:->
 
     // ekhon function ta call kora hocche, jekhane prime numbers 1 theke 100 er moddhe print korbe
     echo "Prime Numbers between 1 to 100:\n"; 
-    printPrimeNumbers(1, 100);  // 1 theke 100 er moddhe prime numbers print korbe
+    printPrimeNumbersanother(1, 100);  // 1 theke 100 er moddhe prime numbers print korbe
 ?>
 
 

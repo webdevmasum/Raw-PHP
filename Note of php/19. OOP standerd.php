@@ -60,12 +60,6 @@ php oop best practice demo
     ?>
 
 
-    <?php
-        // Secure Input Data
-        function clean_input($data) {
-            return htmlspecialchars(strip_tags(trim($data)));
-        }
-    ?>
 
 
 
