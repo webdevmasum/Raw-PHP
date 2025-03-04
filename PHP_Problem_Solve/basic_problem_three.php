@@ -31,7 +31,24 @@
 
 
 
-✅
+✅ Problem 3: Check if a Number is Prime
+
+    <?php
+        function isPrime($num) {
+            if ($num < 2) return "Not Prime";
+            for ($i = 2; $i <= sqrt($num); $i++) {
+                if ($num % $i == 0) return "Not Prime";
+            }
+            return "Prime";
+        }
+
+        // Test
+        echo isPrime(7); // Output: Prime
+    ?>
+
+
+
+
 ✅
 ✅
 ✅
