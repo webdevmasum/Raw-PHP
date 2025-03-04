@@ -49,7 +49,25 @@
 
 
 
-✅
+✅ Problem 4: Find the GCD (Greatest Common Divisor)
+
+    <?php
+        function gcd($a, $b) {
+            while ($b != 0) {
+                $temp = $b;
+                $b = $a % $b;
+                $a = $temp;
+            }
+            return $a;
+        }
+
+        // Test
+        echo gcd(48, 18); // Output: 6
+    ?>
+
+
+
+
 ✅
 ✅
 ✅
