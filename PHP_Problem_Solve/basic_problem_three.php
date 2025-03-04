@@ -130,7 +130,20 @@
 
 
 
-✅
+✅ Problem 9: Find the Largest Number in an Array
+
+    <?php
+        function findLargestInArray($arr) {
+            return max($arr);
+        }
+
+        // Test
+        echo findLargestInArray([1, 5, 3, 9, 2]); // Output: 9
+    ?>
+
+
+
+
 ✅
 ✅
 ✅
