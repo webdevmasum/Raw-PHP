@@ -127,7 +127,20 @@
 
 
 
-✅
+✅ Problem 10: Count the Occurrence of Each Character in a String
+
+    <?php
+        function countCharacters($str) {
+            return array_count_values(str_split($str));
+        }
+
+        // Test
+        print_r(countCharacters("banana"));
+        // Output: Array ( [b] => 1 [a] => 3 [n] => 2 )
+    ?>
+
+
+
 ✅
 ✅
 ✅
