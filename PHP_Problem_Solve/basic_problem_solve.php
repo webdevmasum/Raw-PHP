@@ -97,7 +97,21 @@
 
 
 
-✅
+✅ Problem 8: Find the Missing Number in a Consecutive Array
+
+    <?php
+        function findMissingNumber($arr) {
+            $n = count($arr) + 1;
+            $expectedSum = ($n * ($n + 1)) / 2;
+            return $expectedSum - array_sum($arr);
+        }
+
+        // Test
+        echo findMissingNumber([1, 2, 3, 5]); // Output: 4
+    ?>
+
+
+
 ✅
 ✅
 ✅
