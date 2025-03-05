@@ -112,7 +112,21 @@
 
 
 
-✅
+✅Problem 9: Find the Most Frequent Element in an Array
+
+    <?php
+        function mostFrequentElement($arr) {
+            $countValues = array_count_values($arr);
+            arsort($countValues);
+            return key($countValues);
+        }
+
+        // Test
+        echo mostFrequentElement([1, 3, 3, 2, 3, 1, 1, 1, 4, 5]); // Output: 1
+    ?>
+
+
+
 ✅
 ✅
 ✅
