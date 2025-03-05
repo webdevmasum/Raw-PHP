@@ -141,7 +141,19 @@
 
 
 
-✅
+✅ Problem 11: Convert String to Title Case
+
+    <?php
+        function titleCase($str) {
+            return ucwords(strtolower($str));
+        }
+
+        // Test
+        echo titleCase("hello world"); // Output: Hello World
+    ?>
+
+
+
 ✅
 ✅
 ✅
