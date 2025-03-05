@@ -39,7 +39,7 @@
 
 
 
-✅Problem 14: Generate a Random Password
+✅Problem 4: Generate a Random Password
 
     <?php
         function generatePassword($length = 8) {
@@ -56,7 +56,21 @@
     ?>
 
 
-✅
+✅ Problem 15: Remove White Spaces from a String
+
+    <?php
+        function removeSpaces($str) {
+            return preg_replace('/\s+/', '', $str);
+        }
+
+        // Test
+        echo removeSpaces("Hello World!"); // Output: HelloWorld!
+    ?>
+
+
+
+
+
 ✅
 ✅
 ✅
