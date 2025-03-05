@@ -182,7 +182,20 @@
 
 
 
-✅
+✅ Problem 14: Find Common Elements Between Two Arrays
+
+    <?php
+        function commonElements($arr1, $arr2) {
+            return array_intersect($arr1, $arr2);
+        }
+
+        // Test
+        print_r(commonElements([1, 2, 3, 4], [3, 4, 5, 6]));
+        // Output: [3, 4]
+    ?>
+
+
+
 ✅
 ✅
 ✅
