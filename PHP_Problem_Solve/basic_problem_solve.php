@@ -56,7 +56,7 @@
     ?>
 
 
-✅ Problem 15: Remove White Spaces from a String
+✅ Problem 5: Remove White Spaces from a String
 
     <?php
         function removeSpaces($str) {
@@ -69,9 +69,20 @@
 
 
 
+✅ Problem 16: Reverse an Integer
+
+    <?php
+        function reverseInteger($num) {
+            $reversed = (int) strrev((string) abs($num));
+            return $num < 0 ? -$reversed : $reversed;
+        }
+
+        // Test
+        echo reverseInteger(-12345); // Output: -54321
+    ?>
 
 
-✅
+
 ✅
 ✅
 ✅
