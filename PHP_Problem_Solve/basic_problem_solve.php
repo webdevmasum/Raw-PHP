@@ -168,7 +168,20 @@
 
 
 
-✅
+✅ Problem 13: Check if All Elements in an Array are Unique
+
+    <?php
+        function areAllUnique($arr) {
+            return count($arr) === count(array_unique($arr)) ? "Unique" : "Not Unique";
+        }
+
+        // Test
+        echo areAllUnique([1, 2, 3, 4, 5]); // Output: Unique
+        echo areAllUnique([1, 2, 3, 3, 5]); // Output: Not Unique
+    ?>
+
+
+
 ✅
 ✅
 ✅
