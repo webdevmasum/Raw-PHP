@@ -69,7 +69,7 @@
 
 
 
-✅ Problem 16: Reverse an Integer
+✅ Problem 6: Reverse an Integer
 
     <?php
         function reverseInteger($num) {
@@ -83,7 +83,20 @@
 
 
 
-✅
+✅ Problem 7: Check if Two Strings are Anagrams
+
+    <?php
+        function areAnagrams($str1, $str2) {
+            return count_chars($str1, 1) === count_chars($str2, 1) ? "Anagrams" : "Not Anagrams";
+        }
+
+        // Test
+        echo areAnagrams("listen", "silent"); // Output: Anagrams
+    ?>
+
+
+
+
 ✅
 ✅
 ✅
