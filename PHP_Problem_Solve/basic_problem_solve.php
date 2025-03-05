@@ -196,7 +196,24 @@
 
 
 
-✅
+✅ Problem 15: Find the Median of an Array
+
+    <?php
+        function findMedian($arr) {
+            sort($arr);
+            $count = count($arr);
+            $middle = floor(($count - 1) / 2);
+
+            return $count % 2 ? $arr[$middle] : ($arr[$middle] + $arr[$middle + 1]) / 2;
+        }
+
+        // Test
+        echo findMedian([3, 1, 2, 5, 4]); // Output: 3
+    ?>
+
+
+
+
 ✅
 ✅
 ✅
