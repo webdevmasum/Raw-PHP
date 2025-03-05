@@ -154,7 +154,20 @@
 
 
 
-✅
+✅ Problem 12: Merge Two Sorted Arrays
+
+    <?php
+        function mergeSortedArrays($arr1, $arr2) {
+            return array_merge($arr1, $arr2);
+        }
+
+        // Test
+        print_r(mergeSortedArrays([1, 3, 5], [2, 4, 6])); 
+        // Output: [1, 3, 5, 2, 4, 6]
+    ?>
+
+
+
 ✅
 ✅
 ✅
