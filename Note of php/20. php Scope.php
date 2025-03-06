@@ -71,7 +71,20 @@
     ?>
 
 
+4️⃣ Function Parameter Scope
 
+    Function er vitor je parameters pass kora hoy, shegulo sudhu oi function er moddhei access kora jay.
+    🔹 Example:
+
+
+    <?php
+        function greet($name) {
+            echo "Hello, " . $name;
+        }
+
+        greet("John"); // Output: Hello, John
+        echo $name; // Error: Undefined variable
+    ?>
 
 
 
