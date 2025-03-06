@@ -304,3 +304,86 @@ Image uploaded successfully: uploads/images/1615245412.jpg
 
 
 
+🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️
+Static Scope in Laravel (Model Static Function)
+🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️
+
+
+
+    <?php
+        namespace App\Models;
+
+        use Illuminate\Database\Eloquent\Model;
+
+        class User extends Model
+        {
+            protected $fillable = ['name', 'email'];
+
+            public static function getAllUsers()
+            {
+                return self::all();
+            }
+        }
+    ?>
+
+
+🔹 Controller theke call kora:
+
+    <?php
+        namespace App\Http\Controllers;
+
+        use App\Models\User;
+        use Illuminate\Http\Request;
+
+        class UserController extends Controller
+        {
+            public function index()
+            {
+                $users = User::getAllUsers(); // Static function call
+                return response()->json($users);
+            }
+        }
+
+        // Route
+        Route::get('/users', [UserController::class, 'index']);
+    ?>
+
+
+🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️
+Function Parameter Scope in Laravel (Request Parameters)
+🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️
+
+
+
+    <?php
+        namespace App\Http\Controllers;
+
+        use Illuminate\Http\Request;
+
+        class UserController extends Controller
+        {
+            public function greetUser($name)
+            {
+                return "Hello, " . $name;
+            }
+        }
+
+        // Route
+        Route::get('/greet/{name}', [UserController::class, 'greetUser']);
+    ?>
+
+
+🔹 URL Visit: /greet/John
+🔹 Output: Hello, John
+
+
+
+
+
+
+
+
+
+
+
+
