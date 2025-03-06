@@ -52,7 +52,23 @@
 
 
 
+3️⃣ Static Scope
 
+    Normally function er vitor ekti variable bar bar call korle seta reinitialize hoy, but static keyword use korle oi variable er value save thake.
+    🔹 Example:
+
+
+    <?php
+        function counter() {
+            static $count = 0; // Static variable
+            $count++;
+            echo $count . "<br>";
+        }
+
+        counter(); // Output: 1
+        counter(); // Output: 2
+        counter(); // Output: 3
+    ?>
 
 
 
