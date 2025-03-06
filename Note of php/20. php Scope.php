@@ -18,6 +18,38 @@
 
 
 
+2️⃣ Global Scope
+
+    Jokhon ekta variable function er baire declare kora hoy, tokhon sheta global variable hoy. Function er vitor theke direct access kora jabe na, unless global keyword ba $GLOBALS array use kora hoy.
+    🔹 Example:
+
+
+    <?php
+        $x = 50; // Global Scope
+
+        function myFunctiontwo() {
+            global $x; // Using global keyword
+            echo $x;
+        }
+
+        myFunctiontwo(); // Output: 50
+    ?>
+
+
+
+    🔹 Alternative Way ($GLOBALS Array):
+
+
+    <?php
+        $x = 100;
+
+        function myFunctiontwos() {
+            echo $GLOBALS['x']; // Accessing global variable
+        }
+
+        myFunctiontwos(); // Output: 100
+    ?>
+
 
 
 
