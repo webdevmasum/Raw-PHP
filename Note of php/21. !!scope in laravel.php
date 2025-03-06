@@ -231,6 +231,75 @@ Laravel e config file use kore globally value store kora jay.
 /config-app  ➝  My Laravel App
 
 
+📌📌📌📌📌📌📌📌📌📌📌📌📌📌
+Golbal Scope using Helper Function
+📌📌📌📌📌📌📌📌📌📌📌📌📌📌
+
+
+1️⃣ Helper Function Create Kora (app/helpers.php)
+
+
+    <?php
+        if (!function_exists('uploadImage')) {
+            function uploadImage($file, $path)
+            {
+                $imageName = time() . '.' . $file->getClientOriginalExtension();
+                $file->move(public_path($path), $imageName);
+                return $path . '/' . $imageName;
+            }
+        }
+    ?>
+
+
+2️⃣ Helper Function Load Kora (composer.json e autoload kora)
+
+
+    <?php
+        "autoload": {
+            "files": [
+                "app/helpers.php"
+            ]
+        }
+    ?>
+
+
+3️⃣ Composer Update Kora
+
+    >>>> composer dump-autoload
+
+
+4️⃣ Controller theke Helper Function Call Kora
+
+
+    <?php
+        use Illuminate\Http\Request;
+
+        class ImageController extends Controller
+        {
+            public function store(Request $request)
+            {
+                $request->validate([
+                    'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+                ]);
+
+                $imagePath = uploadImage($request->file('image'), 'uploads/images');
+                return "Image uploaded successfully: " . $imagePath;
+            }
+        }
+    ?>
+
+
+
+5️⃣ Route Setup Kora
+
+    <?php
+    use App\Http\Controllers\ImageController;
+
+    Route::post('/upload-image', [ImageController::class, 'store']);
+    ?>
+
+✅Output:
+Image uploaded successfully: uploads/images/1615245412.jpg
 
 
 
