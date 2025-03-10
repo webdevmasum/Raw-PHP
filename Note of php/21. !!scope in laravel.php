@@ -289,7 +289,6 @@ Golbal Scope using Helper Function
     ?>
 
 
-
 5️⃣ Route Setup Kora
 
     <?php
@@ -303,11 +302,9 @@ Image uploaded successfully: uploads/images/1615245412.jpg
 
 
 
-
 🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️
 Static Scope in Laravel (Model Static Function)
 🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️
-
 
 
     <?php
@@ -354,7 +351,6 @@ Function Parameter Scope in Laravel (Request Parameters)
 🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️🛠️
 
 
-
     <?php
         namespace App\Http\Controllers;
 
@@ -384,34 +380,34 @@ Function Parameter Scope in Laravel (Request Parameters)
 Laravel e OOP scope (public, private, protected) mostly controller, model, middleware, service file gulo te use kora hoy.
 
 
-<?php
-namespace App\Http\Controllers;
+    <?php
+        namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+        use Illuminate\Http\Request;
 
-class UserController extends Controller
-{
-    private function privateMethod()
-    {
-        return "This is a private method";
-    }
+        class UserController extends Controller
+        {
+            private function privateMethod()
+            {
+                return "This is a private method";
+            }
 
-    protected function protectedMethod()
-    {
-        return "This is a protected method";
-    }
+            protected function protectedMethod()
+            {
+                return "This is a protected method";
+            }
 
-    public function publicMethod()
-    {
-        return "This is a public method";
-    }
-}
+            public function publicMethod()
+            {
+                return "This is a public method";
+            }
+        }
 
-// Route
-Route::get('/public', [UserController::class, 'publicMethod']); // Works
-Route::get('/private', [UserController::class, 'privateMethod']); // Error
-Route::get('/protected', [UserController::class, 'protectedMethod']); // Error
-?>
+        // Route
+        Route::get('/public', [UserController::class, 'publicMethod']); // Works
+        Route::get('/private', [UserController::class, 'privateMethod']); // Error
+        Route::get('/protected', [UserController::class, 'protectedMethod']); // Error
+    ?>
 
 
 

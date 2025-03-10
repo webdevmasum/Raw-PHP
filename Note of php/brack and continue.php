@@ -169,7 +169,6 @@ Combining break and continue in a Complex Condition Example:
     }
 ?>
 
-
 Output:
 
 Outer loop iteration 1
@@ -187,3 +186,5 @@ Outer loop iteration 2
 Outer loop iteration 3
   Breaking both loops at i = 3 and j = 2
 
+
+  
