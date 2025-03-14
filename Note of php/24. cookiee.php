@@ -38,3 +38,27 @@ Cookie holo ekta small text file jeita user-er browser e store kora hoy. Ei data
     ?>
 
 
+🛠 Practical Example: Remember Me Login
+
+
+    <?php
+        if(isset($_POST['submit'])){
+            $username = $_POST['username'];
+            
+            // Cookie store
+            setcookie("username", $username, time() + (86400 * 30), "/"); 
+
+            echo "Cookie Set! Welcome, " . $username;
+        }
+        ?>
+
+        <form method="post">
+            <input type="text" name="username" placeholder="Enter your name">
+            <input type="submit" name="submit" value="Login">
+        </form>
+
+        <?php
+        if(isset($_COOKIE["username"])) {
+            echo "<p>Welcome back, " . $_COOKIE["username"] . "</p>";
+        }
+    ?>
