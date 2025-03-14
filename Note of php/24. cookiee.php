@@ -62,3 +62,55 @@ Cookie holo ekta small text file jeita user-er browser e store kora hoy. Ei data
             echo "<p>Welcome back, " . $_COOKIE["username"] . "</p>";
         }
     ?>
+
+
+
+
+📌📌📌📌📌📌📌📌📌📌📌📌
+Real Life Example 
+📌📌📌📌📌📌📌📌📌📌📌📌
+
+🏗✅ ✅ Step 1: Login Page (login.php)
+
+
+    <?php
+        if(isset($_POST['login'])){
+            $username = $_POST['username'];
+
+            // User jokhon login korbe, tokhon cookie set hobe 7 din er jonno
+            setcookie("username", $username, time() + (86400 * 7), "/");
+
+            echo "✅ Login Successful! <a href='welcome.php'>Go to Dashboard</a>";
+        }
+    ?>
+
+    <h2>Login</h2>
+    <form method="post">
+        <input type="text" name="username" placeholder="Enter your name" required>
+        <button type="submit" name="login">Login</button>
+    </form>
+
+
+🏗✅ ✅ Step 2: Welcome Page (welcome.php)
+
+
+    <?php
+        // Cookie check kore welcome message dekhano
+        if(isset($_COOKIE["username"])) {
+            echo "<h2>Welcome back, " . $_COOKIE["username"] . "!</h2>";
+            echo "<a href='logout.php'>Logout</a>";
+        } else {
+            echo "<h2>No user found! Please <a href='login.php'>Login</a></h2>";
+        }
+    ?>
+
+
+🏗✅ ✅ Step 3: Logout Page (logout.php)
+
+    <?php
+        // Cookie delete kore logout kora
+        setcookie("username", "", time() - 3600, "/"); 
+
+        echo "✅ You have been logged out! <a href='login.php'>Login Again</a>";
+    ?>
+
