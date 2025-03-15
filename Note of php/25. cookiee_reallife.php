@@ -42,6 +42,36 @@
 
 
 
+🏗 Step 2: Cookie Manage Kore Use Kora
+    📌 Login Page (login.php)
+
+
+    <?php
+        require 'CookieManager.php';
+
+        $cookie = new CookieManager();
+
+        if(isset($_POST['login'])){
+            $username = $_POST['username'];
+            
+            // Cookie set for 7 days
+            $cookie->setCookie("username", $username, 7);
+
+            echo "✅ Login Successful! <a href='dashboard.php'>Go to Dashboard</a>";
+        }
+    ?>
+
+    <h2>Login</h2>
+    <form method="post">
+        <input type="text" name="username" placeholder="Enter your name" required>
+        <button type="submit" name="login">Login</button>
+    </form>
+
+
+✅ Explanation
+    new CookieManager(); diye class instance create kora holo.
+    setCookie("username", $username, 7); diye username 7 din store thakbe.
+
 
 
 
