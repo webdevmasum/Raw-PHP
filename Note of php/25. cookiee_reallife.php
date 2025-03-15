@@ -74,6 +74,41 @@
 
 
 
+📌 Dashboard Page (dashboard.php)
+
+    <?php
+        require 'CookieManager.php';
+
+        $cookie = new CookieManager();
+
+        if($cookie->hasCookie("username")) {
+            echo "<h2>Welcome back, " . $cookie->getCookie("username") . "!</h2>";
+            echo "<a href='logout.php'>Logout</a>";
+        } else {
+            echo "<h2>No user found! Please <a href='login.php'>Login</a></h2>";
+        }
+    ?>
+
+
+
+✅ Explanation
+    hasCookie("username") diye check kora hocche cookie exist kore kina.
+    getCookie("username") diye cookie er value show kora hocche.
+
+
+
+📌 Logout Page (logout.php)
+
+    <?php
+        require 'CookieManager.php';
+
+        $cookie = new CookieManager();
+
+        // Cookie delete
+        $cookie->deleteCookie("username");
+
+        echo "✅ You have been logged out! <a href='login.php'>Login Again</a>";
+    ?>
 
 
 
