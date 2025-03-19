@@ -117,3 +117,48 @@ Route::get('/auto-login', [AuthController::class, 'autoLogin']);
 
 
 
+
+
+🏗 Step 4: Auto Login Middleware (Optional)
+
+
+php artisan make:middleware AutoLoginMiddleware
+
+
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
+
+class AutoLoginMiddleware
+{
+    public function handle(Request $request, Closure $next)
+    {
+        if (!Auth::check() && $request->cookie('remember_token')) {
+            $user = \App\Models\User::find($request->cookie('remember_token'));
+
+            if ($user) {
+                Auth::login($user);
+            }
+        }
+
+        return $next($request);
+    }
+}
+
+
+
+?>
+
+📌 Middleware Register Koro (app/Http/Kernel.php)
+
+<?php
+protected $middlewareGroups = [
+    'web' => [
+        \App\Http\Middleware\AutoLoginMiddleware::class, // Auto Login Middleware
+    ],
+];
