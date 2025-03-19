@@ -55,3 +55,28 @@ class AuthController extends Controller
         return redirect('/login')->with('success', 'Logged Out!');
     }
 }
+
+
+?>
+
+
+
+🏗 Step 2: Routes Setup (routes/web.php)
+
+<?php
+use App\Http\Controllers\AuthController;
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/dashboard', function () {
+    return "Welcome to Dashboard! <a href='/logout'>Logout</a>";
+})->middleware('auth');
+
+Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/auto-login', [AuthController::class, 'autoLogin']);
+
+?>
+
+
