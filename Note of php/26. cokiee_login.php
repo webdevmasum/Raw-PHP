@@ -80,3 +80,40 @@ Route::get('/auto-login', [AuthController::class, 'autoLogin']);
 ?>
 
 
+
+
+
+
+🏗 Step 3: Login Form Create Koro (resources/views/auth/login.blade.php)
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    @if(session('error'))
+        <p style="color: red;">{{ session('error') }}</p>
+    @endif
+
+    <form action="/login" method="POST">
+        @csrf
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <label>
+            <input type="checkbox" name="remember"> Remember Me
+        </label>
+        <button type="submit">Login</button>
+    </form>
+
+    <p><a href="/auto-login">Auto Login</a></p>
+</body>
+</html>
+
+
+
+
